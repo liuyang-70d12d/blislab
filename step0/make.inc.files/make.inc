@@ -16,7 +16,7 @@ SHAREDLIBBLISLAB = $(BLISLAB_DIR)/lib/libblislab.so
 
 LDFLAGS = -I$(BLISLAB_DIR)/include -I$(BLISLAB_DIR)/kernels -I/$(BLISLAB_MKL_DIR)/include
 
-LDLIBS = $(LIBBLISLAB) -lpthread -lm -mkl=parallel -Werror -Wall -pedantic
+LDLIBS = $(LIBBLISLAB) -lpthread -lm -mkl=parallel -Werror -Wall -pedantic -lblas
 
 OS_NAME = $(shell uname -s)
 ifeq ($(OS_NAME),Linux)

@@ -1,6 +1,6 @@
 /*
  * --------------------------------------------------------------------------
- * BLISLAB 
+ * BLISLAB
  * --------------------------------------------------------------------------
  * Copyright (C) 2016, The University of Texas at Austin
  *
@@ -40,9 +40,9 @@
  *
  * Modification:
  *
- * 
+ *
  * */
- 
+
 
 #include "bl_dgemm.h"
 
@@ -70,7 +70,7 @@ void bl_dgemm(
   for ( j = 0; j < n; j ++ ) {              // Start 2-nd loop
       for ( p = 0; p < k; p ++ ) {          // Start 1-st loop
           for ( i = 0; i < m; i ++ ) {      // Start 0-th loop
-
+              // column-major
               //C[ j * ldc + i ] += A[ p * lda + i ] * B[ j * ldb + p ];
               C( i, j ) += A( i, p ) * B( p, j ); //Each operand is a MACRO defined in bl_dgemm() function.
 
